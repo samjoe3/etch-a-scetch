@@ -1,0 +1,23 @@
+body {
+    background-color: red;
+    font-family: sans-serif;
+}
+
+.header {
+    color: white;
+    text-shadow: 0 0 .5rem black;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5vh;
+}
+.underheader {
+    margin-top: 1vh;
+    font-size: 1rem;
+}
+.generator {
+    scale: 1.5;
+}
+.grid {
+    display: flex;
+    
+}
