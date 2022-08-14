@@ -16,8 +16,24 @@ body {
 }
 .generator {
     scale: 1.5;
+    margin-bottom: 2vh;
 }
 .grid {
+    background-color: yellow;
+    width: 720px;
+    height: 720px;
     display: flex;
-    
+    flex-wrap: wrap;
+}
+.gridbox {
+    border: .1rem;
+    border-style: solid;
+    background-color: white;
+    box-sizing: border-box;
+    /*border-radius: .3rem;*/
+    flex: 1 0 auto;
+    min-width: 7.2px;
+    max-width: 50%;
+    min-height: 7.2px;
+    max-height: 50%;
 }
