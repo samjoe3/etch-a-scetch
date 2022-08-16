@@ -1,8 +1,10 @@
 body {
     background-color: red;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
 .header {
     color: white;
     text-shadow: 0 0 .5rem black;
@@ -19,11 +21,11 @@ body {
     margin-bottom: 2vh;
 }
 .grid {
-    background-color: yellow;
+    align-self: center;
     width: 720px;
     height: 720px;
     display: grid;
-      grid-auto-flow: row;
+    grid-auto-flow: row;
 }
 .gridbox {
     border: .1rem;
@@ -32,6 +34,4 @@ body {
     border-style: solid;
     background-color: white;
     box-sizing: border-box;
-    /*border-radius: .3rem;*/
-
 }

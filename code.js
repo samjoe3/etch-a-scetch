@@ -1,20 +1,19 @@
 let grid = document.querySelector('.grid');
 let userPrompt = document.querySelector('.generator');
-userPrompt.addEventListener('click', () => {generateGrid()})
+userPrompt.addEventListener('click', () => {generateGrid()}) /*do i need ; here? */
 defaultGrid();
 function defaultGrid() {
     for (let i = 0; i < 256; i++) {
         defaultGridBox = document.createElement('defaultgridbox');
-        //defaultGridBox.innerHTML = `D${i+1} `;
         grid.appendChild(defaultGridBox);
-        defaultGridBox.classList.add('gridbox')
+        defaultGridBox.classList.add('gridbox');
     }
-
 }
 function generateGrid(num1) {
     while (grid.hasChildNodes()) grid.removeChild(grid.firstChild);
 
-    num1 = prompt('Enter a number between 1 and 10,000.');
+    let userNum = prompt('Enter a number between 1 and 100.');
+    num1 = Math.pow(userNum, 2);
     let columnNumber = document.querySelector('.grid');
     let num2 = (720/Math.sqrt(num1));
     if (num1 >= 1 && num1 <= 10000) {
