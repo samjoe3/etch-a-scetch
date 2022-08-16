@@ -16,7 +16,7 @@ function generateGrid(num1) {
     num1 = Math.pow(userNum, 2);
     let columnNumber = document.querySelector('.grid');
     let num2 = (720/Math.sqrt(num1));
-    if (num1 >= 1 && num1 <= 10000) {
+    if (userNum >= 1 && userNum <= 100) {
         columnNumber.style.gridTemplateColumns = `repeat(${Math.sqrt(num1)}, ${num2}px)`;
         columnNumber.style.gridTemplateRows = `repeat(${Math.sqrt(num1)}, ${num2}px)`;
 
