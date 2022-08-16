@@ -1,6 +1,6 @@
 let grid = document.querySelector('.grid');
 let userPrompt = document.querySelector('.generator');
-userPrompt.addEventListener('click', () => {generateGrid()}); /*do i need ; here? */
+userPrompt.addEventListener('click', () => {generateGrid()});
 defaultGrid();
 
 function defaultGrid() {
@@ -28,9 +28,18 @@ function generateGrid(num1) {
             gridBox = document.createElement('gridbox');
             grid.appendChild(gridBox);
             gridBox.classList.add('gridbox');
+// working here// gridBox.addEventListener('click')
         }
     }
     else {
         alert("Your entry is not a number between 1 and 100, please try again.");
     }
 }
+// function colorBlack() {
+//     let testT = document.querySelector('.gridbox');
+//     testT.addEventListener('click', () => {coloringBlack()});
+//     function coloringBlack() {
+//         testT.style.backgroundColor = "black";
+//     }
+// }
+// colorBlack();

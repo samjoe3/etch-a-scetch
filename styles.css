@@ -1,5 +1,6 @@
 body {
-    background-color: red;
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -10,7 +11,7 @@ body {
     text-shadow: 0 0 .5rem black;
     font-size: 3rem;
     text-align: center;
-    margin-top: 5vh;
+    padding-top: 4vh;
 }
 .underheader {
     margin-top: 1vh;
@@ -18,20 +19,34 @@ body {
 }
 .generator {
     scale: 1.5;
-    margin-bottom: 2vh;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    box-shadow: 0 0 .1rem black;
 }
 .grid {
     align-self: center;
     width: 720px;
     height: 720px;
     display: grid;
-    grid-auto-flow: row;
+    box-shadow: 0 0 0.2rem black;
+    margin-bottom: 2.9vh;
 }
 .gridbox {
-    border: .1rem;
+    border: 0.1em;
     min-height: 7.2px;
     min-width: 7.2px;
     border-style: solid;
-    background-color: white;
+    /* background-color: white; */
     box-sizing: border-box;
 }
+
+/* 
+background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+background-color: #FAD961;
+background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%); 
+
+background-color: #FFE53B;
+background-image: linear-gradient(90deg, #FFE53B 0%, #FF2525 76%);
+*/
