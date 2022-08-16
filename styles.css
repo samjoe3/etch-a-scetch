@@ -23,6 +23,7 @@ body {
     width: 720px;
     height: 720px;
     display: grid;
+      grid-auto-flow: row;
 }
 .gridbox {
     border: .1rem;
