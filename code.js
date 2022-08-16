@@ -1,8 +1,12 @@
 let grid = document.querySelector('.grid');
 let userPrompt = document.querySelector('.generator');
-userPrompt.addEventListener('click', () => {generateGrid()}) /*do i need ; here? */
+userPrompt.addEventListener('click', () => {generateGrid()}); /*do i need ; here? */
 defaultGrid();
+
 function defaultGrid() {
+    grid.style.gridTemplateColumns = 'repeat(16, 45px)';
+    grid.style.gridTemplateRows = 'repeat(16, 45px)';
+
     for (let i = 0; i < 256; i++) {
         defaultGridBox = document.createElement('defaultgridbox');
         grid.appendChild(defaultGridBox);
@@ -10,15 +14,15 @@ function defaultGrid() {
     }
 }
 function generateGrid(num1) {
-    while (grid.hasChildNodes()) grid.removeChild(grid.firstChild);
 
     let userNum = prompt('Enter a number between 1 and 100.');
-    num1 = Math.pow(userNum, 2);
-    let columnNumber = document.querySelector('.grid');
-    let num2 = (720/Math.sqrt(num1));
+    let num2 = (720/userNum);
+    num1 = userNum * userNum;
+
     if (userNum >= 1 && userNum <= 100) {
-        columnNumber.style.gridTemplateColumns = `repeat(${Math.sqrt(num1)}, ${num2}px)`;
-        columnNumber.style.gridTemplateRows = `repeat(${Math.sqrt(num1)}, ${num2}px)`;
+        while (grid.hasChildNodes()) grid.removeChild(grid.firstChild);
+        grid.style.gridTemplateColumns = `repeat(${userNum}, ${num2}px)`;
+        grid.style.gridTemplateRows = `repeat(${userNum}, ${num2}px)`;
 
         for (let i = 0; i < num1; i++) {
             gridBox = document.createElement('gridbox');
@@ -26,5 +30,7 @@ function generateGrid(num1) {
             gridBox.classList.add('gridbox');
         }
     }
-    else alert("Your entry is not a number between 1 and 100, please try again.");
+    else {
+        alert("Your entry is not a number between 1 and 100, please try again.");
+    }
 }
