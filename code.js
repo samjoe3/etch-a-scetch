@@ -1,5 +1,5 @@
 let grid = document.querySelector('.grid');
-let userPrompt = document.querySelector('.generator');
+let userPrompt = document.querySelector('.btncustom');
 userPrompt.addEventListener('click', () => {generateGrid()});
 defaultGrid();
 
@@ -34,7 +34,6 @@ function generateGrid(num1) {
             gridBox.addEventListener('mouseenter', () => {gridBox.style.backgroundColor = "black"});       
         //change the line before this and add a function to get more colors etc..
         }
-
     }
     else {
         alert("Your entry is not a number between 1 and 100, please try again.");

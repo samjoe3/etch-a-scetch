@@ -1,7 +1,5 @@
-html {
-    height: 100vh
-}
 body {
+    height: 100vh;
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
     font-family: sans-serif;
@@ -20,11 +18,26 @@ body {
     margin-top: 1vh;
     font-size: 1rem;
 }
-.generator {
-    scale: 1.5;
+.buttoncontainer {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5vw;
     margin-top: 2vh;
     margin-bottom: 3vh;
-    box-shadow: 0 0 .1rem black;
+}
+.btn {
+    height: 50px;
+    width: 120px;
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 .5rem black;
+    border: 3px solid white;
+    box-shadow: 0 0 0.2rem black;
+    background-color: #FA8BFF;
+    background-image: linear-gradient(225deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+.btn:hover {
+    scale: 1.1;
 }
 .grid {
     align-self: center;
