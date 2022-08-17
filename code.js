@@ -8,9 +8,11 @@ function defaultGrid() {
     grid.style.gridTemplateRows = 'repeat(16, 45px)';
 
     for (let i = 0; i < 256; i++) {
+        let defaultGridBox = i;
         defaultGridBox = document.createElement('defaultgridbox');
         grid.appendChild(defaultGridBox);
         defaultGridBox.classList.add('gridbox');
+        defaultGridBox.addEventListener('mouseenter', () => {defaultGridBox.style.backgroundColor = 'black'});
     }
 }
 function generateGrid(num1) {
@@ -29,7 +31,7 @@ function generateGrid(num1) {
             gridBox = document.createElement('gridbox');
             grid.appendChild(gridBox);
             gridBox.classList.add('gridbox'); 
-            gridBox.addEventListener('mouseover', () => {gridBox.style.backgroundColor = "black"});       
+            gridBox.addEventListener('mouseenter', () => {gridBox.style.backgroundColor = "black"});       
         //change the line before this and add a function to get more colors etc..
         }
 
