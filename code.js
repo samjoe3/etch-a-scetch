@@ -25,21 +25,16 @@ function generateGrid(num1) {
         grid.style.gridTemplateRows = `repeat(${userNum}, ${num2}px)`;
 
         for (let i = 0; i < num1; i++) {
+            let gridBox = i;
             gridBox = document.createElement('gridbox');
             grid.appendChild(gridBox);
-            gridBox.classList.add('gridbox');
-// working here// gridBox.addEventListener('click')
+            gridBox.classList.add('gridbox'); 
+            gridBox.addEventListener('mouseover', () => {gridBox.style.backgroundColor = "black"});       
+        //change the line before this and add a function to get more colors etc..
         }
+
     }
     else {
         alert("Your entry is not a number between 1 and 100, please try again.");
     }
 }
-// function colorBlack() {
-//     let testT = document.querySelector('.gridbox');
-//     testT.addEventListener('click', () => {coloringBlack()});
-//     function coloringBlack() {
-//         testT.style.backgroundColor = "black";
-//     }
-// }
-// colorBlack();
