@@ -2,17 +2,19 @@ let grid = document.querySelector('.grid');
 let userPrompt = document.querySelector('.btncustom');
 userPrompt.addEventListener('click', () => {generateGrid()});
 defaultGrid();
+// colorButtons() {
 
+// }
 function defaultGrid() {
-    grid.style.gridTemplateColumns = 'repeat(16, 45px)';
-    grid.style.gridTemplateRows = 'repeat(16, 45px)';
+    grid.style.gridTemplateColumns = 'repeat(50, 14.4px)';
+    grid.style.gridTemplateRows = 'repeat(50, 14.4px)';
 
-    for (let i = 0; i < 256; i++) {
+    for (let i = 0; i < 2500; i++) {
         let defaultGridBox = i;
         defaultGridBox = document.createElement('defaultgridbox');
         grid.appendChild(defaultGridBox);
         defaultGridBox.classList.add('gridbox');
-        defaultGridBox.addEventListener('mouseenter', () => {defaultGridBox.style.backgroundColor = 'black'});
+        defaultGridBox.onmouseenter = () => {defaultGridBox.style.backgroundColor = "black"};
     }
 }
 function generateGrid(num1) {
