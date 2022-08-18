@@ -1,8 +1,17 @@
 let grid = document.querySelector('.grid');
 let userPrompt = document.querySelector('.btncustom');
-userPrompt.addEventListener('click', () => {generateGrid()});
+userPrompt.addEventListener('click', () => {customGrid()});
 defaultGrid();
 
+
+buttonLarge = document.querySelector('.btnlarge');
+buttonLarge.addEventListener('click', () => {buttonGrid(25)});
+buttonMedium = document.querySelector('.btnmedium');
+buttonMedium.addEventListener('click', () => {buttonGrid(50)});
+buttonSmall = document.querySelector('.btnsmall');
+buttonSmall.addEventListener('click', () => {buttonGrid(75)});
+buttonMicro = document.querySelector('.btnmicro');
+buttonMicro.addEventListener('click', () => {buttonGrid(100)});
 
 let penColor = "black";
 btnw = document.querySelector('.btnwhite');
@@ -34,7 +43,7 @@ function defaultGrid() {
         defaultGridBox.onmouseenter = () => {defaultGridBox.style.backgroundColor = `${penColor}`};
     }   
 }
-function generateGrid(num1) {
+function customGrid() {
 
     let userNum = prompt('Enter a number between 1 and 100.');
     let num2 = (720/userNum);
@@ -50,11 +59,25 @@ function generateGrid(num1) {
             gridBox = document.createElement('gridbox');
             grid.appendChild(gridBox);
             gridBox.classList.add('gridbox'); 
-            gridBox.addEventListener('mouseenter', () => {gridBox.style.backgroundColor = `${penColor}`});       
-        //change the line before this and add a function to get more colors etc..
+            gridBox.addEventListener('mouseenter', () => {gridBox.style.backgroundColor = `${penColor}`});
         }
     }
     else {
         alert("Your entry is not a number between 1 and 100, please try again.");
+    }
+}
+function buttonGrid(buttonNum) {
+    let pxNum = (720/buttonNum) ;
+    gridNum = buttonNum * buttonNum;
+    while (grid.hasChildNodes()) grid.removeChild(grid.firstChild);
+    grid.style.gridTemplateColumns = `repeat(${buttonNum}, ${pxNum}px)`;
+    grid.style.gridTemplateRows = `repeat(${buttonNum}, ${pxNum}px)`;
+
+    for (let i = 0; i < gridNum; i++) {
+        let btnBox = i;
+        btnBox = document.createElement('btnbox');
+        grid.appendChild(btnBox);
+        btnBox.classList.add('gridbox'); 
+        btnBox.addEventListener('mouseenter', () => {btnBox.style.backgroundColor = `${penColor}`});
     }
 }
