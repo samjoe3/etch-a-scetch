@@ -67,8 +67,20 @@ body {
     row-gap: 3vh;
     margin-top: 5vh;
 }
+.btnc {
+    height: 50px;
+    width: 120px;
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 .5rem black;
+    border: 3px solid white;
+    box-shadow: 0 0 0.2rem black;
+}
 .btnwhite {
+    color: black;
     background-color: white;
+    border-color: black;
+    text-shadow: none;
 }
 .btnred {
     background-color: red;
@@ -77,7 +89,9 @@ body {
     background-color: orange;
 }
 .btnyellow {
-    background-color: yellow;
+    background-color: rgb(255, 255, 0);
+    text-shadow: 0 0 .3rem black;
+
 }
 .btngreen {
     background-color: green;
