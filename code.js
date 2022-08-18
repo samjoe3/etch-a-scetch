@@ -2,20 +2,35 @@ let grid = document.querySelector('.grid');
 let userPrompt = document.querySelector('.btncustom');
 userPrompt.addEventListener('click', () => {generateGrid()});
 defaultGrid();
-// colorButtons() {
 
-// }
 function defaultGrid() {
     grid.style.gridTemplateColumns = 'repeat(50, 14.4px)';
     grid.style.gridTemplateRows = 'repeat(50, 14.4px)';
 
     for (let i = 0; i < 2500; i++) {
+        color = "black";
         let defaultGridBox = i;
         defaultGridBox = document.createElement('defaultgridbox');
         grid.appendChild(defaultGridBox);
         defaultGridBox.classList.add('gridbox');
-        defaultGridBox.onmouseenter = () => {defaultGridBox.style.backgroundColor = "black"};
-    }
+        defaultGridBox.onmouseenter = () => {defaultGridBox.style.backgroundColor = `${color}`};
+        btnw = document.querySelector('.btnwhite');
+        btnw.addEventListener('click', () => {color = "white"});
+        btnr = document.querySelector('.btnred');
+        btnr.addEventListener('click', () => {color = "red"});
+        btno = document.querySelector('.btnorange');
+        btno.addEventListener('click', () => {color = "orange"});
+        btny = document.querySelector('.btnyellow');
+        btny.addEventListener('click', () => {color = "yellow"});
+        btng = document.querySelector('.btngreen');
+        btng.addEventListener('click', () => {color = "green"});
+        btnb = document.querySelector('.btnblue');
+        btnb.addEventListener('click', () => {color = "blue"});
+        btnp = document.querySelector('.btnpurple');
+        btnp.addEventListener('click', () => {color = "purple"});
+        btnblk = document.querySelector('.btnblack');
+        btnblk.addEventListener('click', () => {color = "black"}); 
+    }   
 }
 function generateGrid(num1) {
 
