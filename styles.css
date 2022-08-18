@@ -13,6 +13,7 @@ body {
     font-size: 3rem;
     text-align: center;
     margin-top: 3vh;
+    margin-right: 3.2vw;
 }
 .underheader {
     margin-top: 1vh;
@@ -50,7 +51,7 @@ body {
     display: grid;
     box-shadow: 0 0 0.2rem black;
     margin-bottom: 3vh;
-    margin-right: 9vw;
+    margin-right: 2vw;
     margin-left: 2vw;
 }
 .gridbox {
@@ -75,6 +76,9 @@ body {
     text-shadow: 0 0 .5rem black;
     border: 3px solid white;
     box-shadow: 0 0 0.2rem black;
+}
+.btnc:hover {
+    scale: 1.1;
 }
 .btnwhite {
     color: black;
@@ -105,7 +109,20 @@ body {
 .btnblack {
     background-color: black;
 }
-
+.clearbutton {
+    background-color: #FF9A8B;
+    background-image: linear-gradient(0deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);  
+    height: 700px;
+    width: 200px;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 0 .4rem black;
+    border: 3px solid white;
+    box-shadow: 0 0 0.2rem black;
+    align-self: center;
+    margin-bottom: 3vh;
+    border-radius: 10px;
+}
 
 
 /* 

@@ -41,6 +41,8 @@ function defaultGrid() {
         grid.appendChild(defaultGridBox);
         defaultGridBox.classList.add('gridbox');
         defaultGridBox.onmouseenter = () => {defaultGridBox.style.backgroundColor = `${penColor}`};
+        clearButton = document.querySelector('.clearbutton');
+        clearButton.addEventListener('click', () => {defaultGridBox.style.backgroundColor = "white"});
     }   
 }
 function customGrid() {
@@ -60,6 +62,8 @@ function customGrid() {
             grid.appendChild(gridBox);
             gridBox.classList.add('gridbox'); 
             gridBox.addEventListener('mouseenter', () => {gridBox.style.backgroundColor = `${penColor}`});
+            clearButton = document.querySelector('.clearbutton');
+            clearButton.addEventListener('click', () => {gridBox.style.backgroundColor = "white"});
         }
     }
     else {
@@ -79,5 +83,7 @@ function buttonGrid(buttonNum) {
         grid.appendChild(btnBox);
         btnBox.classList.add('gridbox'); 
         btnBox.addEventListener('mouseenter', () => {btnBox.style.backgroundColor = `${penColor}`});
+        clearButton = document.querySelector('.clearbutton');
+        clearButton.addEventListener('click', () => {btnBox.style.backgroundColor = "white"});
     }
 }
